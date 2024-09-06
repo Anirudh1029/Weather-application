@@ -31,6 +31,10 @@ async function checkWeather(cityname){
     description.innerHTML =`${weather_data.weather[0].description}`;
     humidity.innerHTML =`${weather_data.main.humidity}%`;
     wind_speed.innerHTML = `${weather_data.wind.speed}Kmph`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 933b3d7bdcce66507597402096dcb6eb23fc6d6c
     switch(weather_data.weather[0].main){
         case 'Clouds':
             weather_img.src="./pictures/cloud.png";
