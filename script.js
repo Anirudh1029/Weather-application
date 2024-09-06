@@ -30,12 +30,8 @@ async function checkWeather(cityname){
     temperature.innerHTML =`${Math.round(weather_data.main.temp - 273.15)}°C`;
     description.innerHTML =`${weather_data.weather[0].description}`;
     humidity.innerHTML =`${weather_data.main.humidity}%`;
-    if(weather_data.sys.country === 'IN'){
-        wind_speed.innerHTML = `${Math.round(weather_data.wind.speed*(18/5))}Kmph`;
-    }
-    else{
-        wind_speed.innerHTML = `${weather_data.wind.speed}Kmph`;
-    }
+    wind_speed.innerHTML = `${weather_data.wind.speed}Kmph`;
+
     switch(weather_data.weather[0].main){
         case 'Clouds':
             weather_img.src="./pictures/cloud.png";
