@@ -13,6 +13,11 @@ searchbutton.addEventListener('click',()=>{
 })
 
 async function checkWeather(cityname){
+    if(!cityname)
+    {
+        alert("Enter City Name")
+        return;
+    }
     const api_key ="37d2ffcb661feccd62f0d2eb40d7c8b3";
     const url =`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${api_key}`;
 
